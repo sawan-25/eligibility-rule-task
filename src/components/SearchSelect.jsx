@@ -1,14 +1,9 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 import { Search, ChevronDown } from 'lucide-react';
-
-const mockOptions = {
-  'Specific Collections': ['Automated Collection', 'Summer Collection', 'Winter Collection'],
-  'Product Tags': ['black', 'blue', 'red', 'white'],
-  'Specific Product': ['Air jordan-(1)variant(s)', 'Nike Air Max', 'Adidas Superstar']
-};
+import { MOCK_OPTIONS } from '../constants/rules';
 
 const SearchSelect = memo(({ type, value, onChange }) => {
-  const options = useMemo(() => mockOptions[type] || [], [type]);
+  const options = MOCK_OPTIONS[type] || [];
 
   return (
     <div className="w-full">

@@ -1,18 +1,19 @@
 import React, { memo, useMemo } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { RULE_TYPES } from '../constants/rules';
 
 const OperatorSelect = memo(({ ruleType, value, onChange, availableOperators }) => {
   const operators = useMemo(() => {
     switch (ruleType) {
-      case 'Specific Collections':
+      case RULE_TYPES.SPECIFIC_COLLECTIONS:
         return ['contains any', 'is not'];
-      case 'Product Tags':
+      case RULE_TYPES.PRODUCT_TAGS:
         return ['contains any', 'is not'];
-      case 'Specific Product':
+      case RULE_TYPES.SPECIFIC_PRODUCT:
         return ['equals anything', 'contains any', 'is not'];
-      case 'Product Subscribed':
+      case RULE_TYPES.PRODUCT_SUBSCRIBED:
         return ['yes', 'no'];
-      case 'Cart Value Range':
+      case RULE_TYPES.CART_VALUE_RANGE:
         return ['is equal or greater than', 'is between', 'is less than'];
       default:
         return [];

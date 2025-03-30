@@ -1,18 +1,10 @@
 import React, { memo } from 'react';
 import { ChevronDown } from 'lucide-react';
-
-const ruleTypes = [
-  'Specific Collections',
-  'Product Tags',
-  'Specific Product',
-  'Product Subscribed',
-  'Specific Discount Codes',
-  'Cart Value Range'
-];
+import { RULE_TYPES } from '../constants/rules';
 
 const RuleSelect = memo(({ value, onChange, existingRules = [] }) => {
-  // Get array of already selected rule types
   const selectedRuleTypes = existingRules.map(rule => rule.type).filter(Boolean);
+  const ruleTypes = Object.values(RULE_TYPES);
 
   return (
     <div className="w-full relative">
