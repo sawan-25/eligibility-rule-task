@@ -2,7 +2,17 @@ import React, { memo } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { RULE_TYPES } from '../constants/rules';
 
+/**
+ * Component for selecting rule types
+ * Implements rule selection logic and handles already selected rules
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.value - Currently selected rule type
+ * @param {Function} props.onChange - Handler for rule type changes
+ * @param {Array} props.existingRules - List of all current rules
+ */
 const RuleSelect = memo(({ value, onChange, existingRules = [] }) => {
+  // Get list of already selected rule types to prevent duplicates
   const selectedRuleTypes = existingRules.map(rule => rule.type).filter(Boolean);
   const ruleTypes = Object.values(RULE_TYPES);
 
