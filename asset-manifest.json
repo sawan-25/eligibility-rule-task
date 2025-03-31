@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/eligibility-rule-task/static/css/main.99e53662.css",
+    "main.js": "/eligibility-rule-task/static/js/main.605a170a.js",
+    "static/js/453.641ce908.chunk.js": "/eligibility-rule-task/static/js/453.641ce908.chunk.js",
+    "index.html": "/eligibility-rule-task/index.html",
+    "main.99e53662.css.map": "/eligibility-rule-task/static/css/main.99e53662.css.map",
+    "main.605a170a.js.map": "/eligibility-rule-task/static/js/main.605a170a.js.map",
+    "453.641ce908.chunk.js.map": "/eligibility-rule-task/static/js/453.641ce908.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99e53662.css",
+    "static/js/main.605a170a.js"
+  ]
+}
